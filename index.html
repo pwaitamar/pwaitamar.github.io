@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>PWA ITAMAR</title>
+    <script src="js/registraServiceWorker.js"></script>
+
+    <!-- Ícono para la página web. Debe ponerse en la raíz de la página. -->
+    <link rel="icon" sizes="32x32" href="favicon.ico">
+
+    <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
+    <meta name="theme-color" content="#81d4f4">
+
+    <!-- Configuración de la PWA: Chrome y Edge. -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Configuración para Web Clip en Safari. -->
+    <meta name="apple-mobile-web-app-title" content="dmppwa">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="img/icono2048.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="img/icono256.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/icono1024.png">
+    <link rel="apple-touch-icon" sizes="2048x2048" href="img/icono2048.png">
+
+    <script type="module" src="cmp/mi-footer.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
+  </style>
+  
+  
+  </head>
+  <body>
+       <style>
+      :root {
+        --color-primario: black;
+        --color-primario-fondo: #00FF00;
+        --color-contenido: black;
+        --color-contenido-fondo: white;
+        --color-active: #4646462c;
+        --font-family: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        color: var(--color-contenido);
+        background-color: var(--color-contenido-fondo);
+        font-family: var(--font-family);
+      }
+
+      body {
+        margin: 0;
+      }
+      nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      nav ul {
+        color: var(--color-primario);
+        background-color: var(--color-primario-fondo);
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+        align-items: stretch;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li a {
+        display: block;
+        color: var(--color-letra-primario);
+        font-size: 0.75rem;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+        text-align: center;
+      }
+
+      nav li a span.material-icons {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      nav ul li a:active {
+        background-color: var(--color-active);
+      }
+      h2{
+ text-align:center;
+
+font-size: 100%;
+         }
+   
+    </style>
+  </head>
+  <body>
+   <div >
+    <h2>BIENVENIDO A LA CALCULADORA PARA FORMULAS MATEMATICAS</h2>
+       
+       
+        <form name="calculator">
+          <h3>Calculadora </h3>
+          <p>Haz algun calculo para ver el resultado.</p>
+          <input type="textfield" name="ans" value="">
+          <br>
+          <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+          <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+          <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+          <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+          <br>
+          <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+          <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+          <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+          <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+          <br>
+          <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+          <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+          <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+          <input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+          <br>
+          <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+          <input type="reset" value="c">
+          <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+          <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+          </form>
+      </body>
+      </html>
+ 
+        
+    </div>
+      <nav>
+        <ul>
+          <li>
+              <a class="btn bnt-secondary">Inicio de la pagina</a>
+        </ul>
+      </nav>
+   
+    </form>
+    <footer>
+      <p>
+        <mi-footer></mi-footer>
+      </p>
+    </footer>
+  </body>
+</html>
